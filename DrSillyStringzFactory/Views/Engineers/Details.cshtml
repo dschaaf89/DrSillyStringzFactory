@@ -10,14 +10,16 @@
   </div>
   @if(Model.EngineerMachine.Count == 0)
   {
-    <p>@Model.Name has no Machines.</p>
+    <p>@Model.Name has no Machines Licensed to Fix.</p>
   }
+  <p>@Model.Name is licensed to Fix</p>
   <ol>
     @foreach (EngineerMachine engineerMachine in Model.EngineerMachine)
     {
-        <li>@engineerMachine.Engineer.Name</li>
+        <li>@engineerMachine.Machine.Name</li>
     }
   </ol>
+  <p>@Model.Name has these Licenses</p>
     <ol>
     @foreach (EngineerLicense engineerLicense in Model.EngineerLicense)
     {

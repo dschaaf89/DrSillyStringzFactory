@@ -9,8 +9,9 @@
   </div>
   @if(Model.EngineerLicense.Count == 0)
   {
-    <p>@Model.LicenseType has no Engineers.</p>
+    <p>@Model.LicenseType has no Engineers that are licensed.</p>
   }
+  <p>These Engineers have this License:</p>
   <ul>
     @foreach (EngineerLicense engineerLicense in Model.EngineerLicense)
     {
@@ -18,7 +19,7 @@
     }
   </ul>
   
-  <button class="btn btn-outline-dark" onclick="window.location.href='/Licenses'">Licenses</button>
+<button class="btn btn-outline-dark" onclick="window.location.href='/Licenses'">Licenses</button>
 @Html.ActionLink("Delete","Delete", new {id = Model.LicenseType}, new{@class="btn btn-outline-dark"})
 
 </div>

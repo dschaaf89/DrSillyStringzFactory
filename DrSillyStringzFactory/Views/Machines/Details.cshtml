@@ -10,9 +10,10 @@
   </div>
   @if(Model.EngineerMachine.Count == 0)
   {
-    <p>@Model.Name has no Engineers.</p>
+    <p>@Model.Name has no Engineers able to fix.Please hire a @Model.Name specialist to Fix.</p>
   }
   <ol>
+    <p>these Engineer's can the fix @Model.Name</p>
     @foreach (EngineerMachine engineerMachine in Model.EngineerMachine)
     {
         <li>@engineerMachine.Engineer.Name</li>
