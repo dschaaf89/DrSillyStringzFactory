@@ -26,7 +26,7 @@ namespace DrSillyStringzFactory
         services.AddMvc();
 
         services.AddEntityFrameworkMySql()
-            .AddDbContext<EngineerMachineContext>(options => options  //change here
+            .AddDbContext<FactoryContext>(options => options  //change here
             .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
         }
 

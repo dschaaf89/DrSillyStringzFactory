@@ -10,7 +10,7 @@
   </div>
   @if(Model.EngineerMachine.Count == 0)
   {
-    <p>@Model.Name has no Machines.</p>
+    <p>@Model.Name has no Engineers.</p>
   }
   <ol>
     @foreach (EngineerMachine engineerMachine in Model.EngineerMachine)
@@ -18,8 +18,8 @@
         <li>@engineerMachine.Machine.Name</li>
     }
   </ol>
-  <button class="btn btn-outline-dark" onclick="window.location.href='/machines'">Machines</button>
-  @Html.ActionLink("Delete","Delete", new {id = Model.DoctorId}, new{@class="btn btn-outline-dark"})
+  <button class="btn btn-outline-dark" onclick="window.location.href='/Machines'">Machines</button>
+  @Html.ActionLink("Delete","Delete", new {id = Model.MachineId}, new{@class="btn btn-outline-dark"})
 
 
 </div>

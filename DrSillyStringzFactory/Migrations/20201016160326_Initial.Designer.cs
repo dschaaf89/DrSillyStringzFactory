@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DrSillyStringzFactory.Migrations
 {
-    [DbContext(typeof(EngineerMachineContext))]
+    [DbContext(typeof(FactoryContext))]
     [Migration("20201016160326_Initial")]
     partial class Initial
     {

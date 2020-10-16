@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+@using DrSillyStringzFactory.Models;
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>@Model.LicenseType Page</h1>
+  </div>
+  @if(Model.EngineerLicense.Count == 0)
+  {
+    <p>@Model.LicenseType has no Engineers.</p>
+  }
+  <ul>
+    @foreach (EngineerLicense engineerLicense in Model.EngineerLicense)
+    {
+        <li>@engineerLicense.Engineer.Name</li>
+    }
+  </ul>
+  
+  <button class="btn btn-outline-dark" onclick="window.location.href='/Licenses'">Licenses</button>
+@Html.ActionLink("Delete","Delete", new {id = Model.LicenseType}, new{@class="btn btn-outline-dark"})
+
+</div>

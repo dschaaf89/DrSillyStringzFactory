@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DrSillyStringzFactory.Migrations
 {
-    [DbContext(typeof(EngineerMachineContext))]
+    [DbContext(typeof(FactoryContext))]
     partial class EngineerMachineContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

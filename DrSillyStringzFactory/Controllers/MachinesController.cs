@@ -10,8 +10,8 @@ namespace DrSillyStringzFactory.Controllers
 {
     public class MachinesController : Controller
     {
-    private readonly EngineerMachineContext _db;
-    public MachinesController(EngineerMachineContext db)
+    private readonly FactoryContext _db;
+    public MachinesController(FactoryContext db)
     {
       _db = db;
     }
