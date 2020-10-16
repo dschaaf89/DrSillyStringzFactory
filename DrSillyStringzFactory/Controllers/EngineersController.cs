@@ -30,5 +30,10 @@ namespace DrSillyStringzFactory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+    public ActionResult details(int id)
+    {
+      Engineer model = _db.Engineers.FirstOrDefault(x => x.EngineerId == id);
+      return View(model); 
+    }
   }
 }
