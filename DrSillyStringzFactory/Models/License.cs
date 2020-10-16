@@ -10,6 +10,7 @@ namespace DrSillyStringzFactory.Models
         }
          public int LicenseId { get; set; } 
         public string LicenseType { get; set; } 
+        public string Description {get; set;}
         public virtual ICollection<EngineerLicense> EngineerLicense {get;set;}
     }
 }

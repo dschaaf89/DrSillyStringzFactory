@@ -3,21 +3,28 @@
 }
 @using DrSillyStringzFactory.Models;
 
+
 <div class="container">
   <div class="jumbotron">
     <h1>@Model.Name Page</h1>
   </div>
-  @if(Model.EngineerMachine.Count == 0)
+  @if(Model.EngineerMachines.Count == 0)
   {
-    <p>@Model.Name has no doctors.</p>
+    <p>@Model.Name has no Engineers.</p>
   }
-  <ul>
+  <ol>
     @foreach (EngineerMachine engineerMachine in Model.EngineerMachine)
     {
-        <li>@engineerMachine.Engineer.Name </li>
+        <li>@engineerMachine.Machine.Name</li>
     }
-  </ul>
-  <button class="btn btn-outline-dark" onclick="window.location.href='/engineers/addMachine/@Model.EngineerId'">Add a Machine</button>
+  </ol>
+    <ol>
+    @foreach (EngineerLicense engineerLicense in Model.EngineerLicense)
+    {
+        <li>@engineerLicense.License.EngineerLicense</li>
+    }
+  </ol>
+  <button class="btn btn-outline-dark" onclick="window.location.href='/engineers/addLicense/@Model.EngineerId'">Add a License</button>
   <button class="btn btn-outline-dark" onclick="window.location.href='/engineers'">Engineers</button>
   @Html.ActionLink("Delete","Delete", new {id = Model.EngineerId}, new{@class="btn btn-outline-dark"})
 
