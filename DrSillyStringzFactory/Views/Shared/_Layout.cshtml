@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Doctor Office</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="script" href="~/js/site.js">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+    <div class="containter">
+  
+      <div class="w3-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="\">DocHelper</a>
+          <button class="w3-bar-item w3-button"><i class="fa fa-h-square"></i>@Html.ActionLink("Home", "Index", "Home")</button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+           <li class="nav-item dropdown">
+          <button class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user-md"></i>@Html.ActionLink("Doctors", "Index","Doctors")</button>
+          <button class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-users"></i> @Html.ActionLink("Patients", "Index","Patients")</button>
+          <button class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-building-o"></i> @Html.ActionLink("Specialties", "Index","Specialties")</button>
+        </nav>
+      </div>
+      @RenderBody()
+    </div>
+  </body>
+</html>
