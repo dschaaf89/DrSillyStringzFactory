@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+@using DrSillyStringzFactory.Models;
+<div class="container">
+  <div class="jumbotron">
+    <h3>Machines</h3>
+  </div>
+  @if(Model.Count == 0)
+  {
+    <h6>There are no Machines at this time.</h6>
+  }
+  <ol>
+    @foreach(Machine machine in Model)
+    {
+      <li>@Html.ActionLink(machine.Name,"Details", new {id = machine.MachineId})</li>
+    }
+  </ol>
+
+  <p>@Html.ActionLink("Create Machine","Create")</p>
+  <p>@Html.ActionLink("Home","Index","Home")</p>
+
+
+
+</div>
