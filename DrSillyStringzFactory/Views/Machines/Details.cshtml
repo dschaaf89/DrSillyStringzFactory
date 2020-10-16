@@ -15,7 +15,7 @@
   <ol>
     @foreach (EngineerMachine engineerMachine in Model.EngineerMachine)
     {
-        <li>@engineerMachine.Machine.Name</li>
+        <li>@engineerMachine.Engineer.Name</li>
     }
   </ol>
   <button class="btn btn-outline-dark" onclick="window.location.href='/Machines/AddEngineer/@Model.MachineId'">Add a Engineer</button>

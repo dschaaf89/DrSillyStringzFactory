@@ -21,7 +21,7 @@
     <ol>
     @foreach (EngineerLicense engineerLicense in Model.EngineerLicense)
     {
-        <li>@engineerLicense.License.LicenseId</li>
+        <li>@engineerLicense.License.LicenseType</li>
     }
   </ol>
   <button class="btn btn-outline-dark" onclick="window.location.href='/Engineers/AddLicense/@Model.EngineerId'">Add a License</button>
