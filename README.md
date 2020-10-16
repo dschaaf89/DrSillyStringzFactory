@@ -11,7 +11,7 @@ This Project was to show my understanding of many to many relationships. this pr
 
 ###Brainstorming
 
-![](images/chart.jpg)
+<h1 align='center'><img width='900' height='450' src='images/chart.png'>
  
 ### Specs
 | Spec | |  |
