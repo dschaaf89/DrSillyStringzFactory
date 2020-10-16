@@ -8,25 +8,25 @@
   <div class="jumbotron">
     <h1>@Model.Name Page</h1>
   </div>
-  @if(Model.EngineerMachines.Count == 0)
+  @if(Model.EngineerMachine.Count == 0)
   {
-    <p>@Model.Name has no Engineers.</p>
+    <p>@Model.Name has no Enineers.</p>
   }
   <ol>
-    @foreach (EngineerMachine engineerMachine in Model.EngineerMachine)
+    @foreach (EngineerMachine engineerMachine in Model.EngineerMachines)
     {
-        <li>@engineerMachine.Machine.Name</li>
+        <li>@engineerMachine.Engineer.Name</li>
     }
   </ol>
     <ol>
-    @foreach (EngineerLicense engineerLicense in Model.EngineerLicense)
+    @foreach (EngineerLicense engineerLicense in Model.EngineerLicenses)
     {
-        <li>@engineerLicense.License.EngineerLicense</li>
+        <li>@engineerLicense.License.LicenseType</li>
     }
   </ol>
-  <button class="btn btn-outline-dark" onclick="window.location.href='/engineers/addLicense/@Model.EngineerId'">Add a License</button>
-  <button class="btn btn-outline-dark" onclick="window.location.href='/engineers'">Engineers</button>
-  @Html.ActionLink("Delete","Delete", new {id = Model.EngineerId}, new{@class="btn btn-outline-dark"})
+  <button class="btn btn-outline-dark" onclick="window.location.href='/doctors/addSpecialty/@Model.DoctorId'">Add a Specialty</button>
+  <button class="btn btn-outline-dark" onclick="window.location.href='/doctors'">Doctors</button>
+  @Html.ActionLink("Delete","Delete", new {id = Model.DoctorId}, new{@class="btn btn-outline-dark"})
 
 
 </div>

@@ -10,6 +10,8 @@
   {
     @Html.LabelFor(model => model.LicenseType)
     @Html.TextBoxFor(model => model.LicenseType, new {required = "required"})
+    @Html.LabelFor(model => model.Description)
+    @Html.TextAreaFor(model => model.Description, new {required = "required"})
     <input type="submit" value="Add new License" class="btn btn-outline-dark" />
   }
 </div>
