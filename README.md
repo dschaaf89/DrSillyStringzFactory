@@ -11,7 +11,7 @@ This Project was to show my understanding of many to many relationships. this pr
 
 ###Brainstorming
 
-<h1 align='center'><img width='600' height='450' src='DRSILLYSTRINGZFACTORY/images/chart.png'>
+<h1 align='center'><img width='600' height='450' src='DrSillyStringzFactory/wwwroot/img/chart.png'>
  
 ### Specs
 | Spec | |  |
@@ -51,7 +51,7 @@ This Project was to show my understanding of many to many relationships. this pr
 ### Database Setup
 
 *setup with database update
-* run dotnet ef database update and it will build out your datebase.
+* run dotnet ef database update and it will build out your database.
 
 * Setup with SQL Import
   * MySQL
