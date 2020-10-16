@@ -35,5 +35,24 @@ namespace DrSillyStringzFactory.Controllers
       Engineer model = _db.Engineers.FirstOrDefault(x => x.EngineerId == id);
       return View(model); 
     }
+    public ActionResult AddDoctor(int id)
+    {
+      Engineer thisEngineer = _db.Engineers.FirstOrDefault(s => s.EngineerId == id);
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      return View(thisEngineer);
+    }
+    [HttpPost]
+    public ActionResult AddDoctor(EngineerMachine engineerMachine)
+    {
+      if (engineerMachine.MachineId != 0)
+      {
+        if (_db.EngineerMachines.Where(x => x.EngineerId == engineerMachine.EngineerId && x.MachineId == engineerMachine.MachineId).ToHashSet().Count == 0)
+        {
+          _db.EngineerMachines.Add(engineerMachine);
+        }
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
