@@ -31,6 +31,20 @@ namespace DrSillyStringzFactory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+    public ActionResult Delete(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(x => x.MachineId == id);
+      return View(thisMachine);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      var thisMachine = _db.Machines.FirstOrDefault(x => x.MachineId == id);
+      _db.Doctors.Remove(thisMachine);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
         
     }
 }

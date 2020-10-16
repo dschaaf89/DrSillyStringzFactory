@@ -1902,6 +1902,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Machines\\Delete.cshtml",
+      "TargetPath": "Views\\Machines\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Engineers\\Delete.cshtml",
       "TargetPath": "Views\\Engineers\\Delete.cshtml",
       "FileKind": "mvc"
