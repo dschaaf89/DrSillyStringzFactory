@@ -18,6 +18,7 @@
         <li>@engineerMachine.Machine.Name</li>
     }
   </ol>
+  <button class="btn btn-outline-dark" onclick="window.location.href='/Machines/AddEngineer/@Model.MachineId'">Add a Engineer</button>
   <button class="btn btn-outline-dark" onclick="window.location.href='/Machines'">Machines</button>
   @Html.ActionLink("Delete","Delete", new {id = Model.MachineId}, new{@class="btn btn-outline-dark"})
 
