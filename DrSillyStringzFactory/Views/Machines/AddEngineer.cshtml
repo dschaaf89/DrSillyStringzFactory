@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@model DrSillyStringzFactory.Models.Machine;
+<div class="Container">
+  <div class="jumbotron">
+    <h1>Add a Engineer</h1>
+  </div>
+
+
+  <h4>Add a Engineer to this Machine: @Html.DisplayFor(model => model.Name)</h4>
+
+  @using (Html.BeginForm())
+  {
+      @Html.HiddenFor(model => model.MachineId)
+
+      @Html.Label("Select an Engineer")
+      @Html.DropDownList("EngineerId")
+
+      <input type="submit" value="Save" />
+  }
+
+  <p>@Html.ActionLink("Back to Machine", "details", new {id = Model.MachineId})</p>
+
+</div>

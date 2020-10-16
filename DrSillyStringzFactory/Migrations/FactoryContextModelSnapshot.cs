@@ -2,16 +2,14 @@
 using DrSillyStringzFactory.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DrSillyStringzFactory.Migrations
 {
     [DbContext(typeof(FactoryContext))]
-    [Migration("20201016160326_Initial")]
-    partial class Initial
+    partial class FactoryContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,13 +21,29 @@ namespace DrSillyStringzFactory.Migrations
                     b.Property<int>("EngineerId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("License");
-
                     b.Property<string>("Name");
 
                     b.HasKey("EngineerId");
 
                     b.ToTable("Engineers");
+                });
+
+            modelBuilder.Entity("DrSillyStringzFactory.Models.EngineerLicense", b =>
+                {
+                    b.Property<int>("EngineerLicenseId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("EngineerId");
+
+                    b.Property<int>("LicenseId");
+
+                    b.HasKey("EngineerLicenseId");
+
+                    b.HasIndex("EngineerId");
+
+                    b.HasIndex("LicenseId");
+
+                    b.ToTable("EngineerLicenses");
                 });
 
             modelBuilder.Entity("DrSillyStringzFactory.Models.EngineerMachine", b =>
@@ -50,6 +64,20 @@ namespace DrSillyStringzFactory.Migrations
                     b.ToTable("EngineerMachines");
                 });
 
+            modelBuilder.Entity("DrSillyStringzFactory.Models.License", b =>
+                {
+                    b.Property<int>("LicenseId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("LicenseType");
+
+                    b.HasKey("LicenseId");
+
+                    b.ToTable("Licenses");
+                });
+
             modelBuilder.Entity("DrSillyStringzFactory.Models.Machine", b =>
                 {
                     b.Property<int>("MachineId")
@@ -60,6 +88,19 @@ namespace DrSillyStringzFactory.Migrations
                     b.HasKey("MachineId");
 
                     b.ToTable("Machines");
+                });
+
+            modelBuilder.Entity("DrSillyStringzFactory.Models.EngineerLicense", b =>
+                {
+                    b.HasOne("DrSillyStringzFactory.Models.Engineer", "Engineer")
+                        .WithMany("EngineerLicense")
+                        .HasForeignKey("EngineerId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("DrSillyStringzFactory.Models.License", "License")
+                        .WithMany("EngineerLicense")
+                        .HasForeignKey("LicenseId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("DrSillyStringzFactory.Models.EngineerMachine", b =>

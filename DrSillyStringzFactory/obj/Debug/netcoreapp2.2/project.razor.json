@@ -1877,6 +1877,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Machines\\AddEngineer.cshtml",
+      "TargetPath": "Views\\Machines\\AddEngineer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Licenses\\Details.cshtml",
       "TargetPath": "Views\\Licenses\\Details.cshtml",
       "FileKind": "mvc"
@@ -1894,6 +1899,11 @@
     {
       "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Engineers\\AddLicense.cshtml",
+      "TargetPath": "Views\\Engineers\\AddLicense.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -1934,11 +1944,6 @@
     {
       "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Licenses\\Delete.cshtml",
       "TargetPath": "Views\\Licenses\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Engineers\\AddMachine.cshtml",
-      "TargetPath": "Views\\Engineers\\AddMachine.cshtml",
       "FileKind": "mvc"
     },
     {

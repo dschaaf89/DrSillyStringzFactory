@@ -8,9 +8,9 @@
   <div class="jumbotron">
     <h1>@Model.Name Page</h1>
   </div>
-  @if(Model.EngineerMachine.Count == 0)
+  @if(Model.EngineerMachines.Count == 0)
   {
-    <p>@Model.Name has no Enineers.</p>
+    <p>@Model.Name has no Machines.</p>
   }
   <ol>
     @foreach (EngineerMachine engineerMachine in Model.EngineerMachines)
@@ -21,12 +21,12 @@
     <ol>
     @foreach (EngineerLicense engineerLicense in Model.EngineerLicenses)
     {
-        <li>@engineerLicense.License.LicenseType</li>
+        <li>@engineerLicense.License.LicenseId</li>
     }
   </ol>
-  <button class="btn btn-outline-dark" onclick="window.location.href='/doctors/addSpecialty/@Model.DoctorId'">Add a Specialty</button>
-  <button class="btn btn-outline-dark" onclick="window.location.href='/doctors'">Doctors</button>
-  @Html.ActionLink("Delete","Delete", new {id = Model.DoctorId}, new{@class="btn btn-outline-dark"})
+  <button class="btn btn-outline-dark" onclick="window.location.href='/Engineers/AddLicense/@Model.EngineerId'">Add a License</button>
+  <button class="btn btn-outline-dark" onclick="window.location.href='/Engineers'">Engineers</button>
+  @Html.ActionLink("Delete","Delete", new {id = Model.EngineerId}, new{@class="btn btn-outline-dark"})
 
 
 </div>

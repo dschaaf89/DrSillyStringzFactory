@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@model DrSillyStringzFactory.Models.Engineer;
+<div class="Container">
+  <div class="jumbotron">
+    <h1>Add a License</h1>
+  </div>
+
+
+  <h4>Add a License to this Engineer: @Html.DisplayFor(model => model.Name)</h4>
+
+  @using (Html.BeginForm())
+  {
+      @Html.HiddenFor(model => model.EngineerId)
+
+      @Html.Label("Select License")
+      @Html.DropDownList("LicenseId")
+
+      <input type="submit" value="Save" />
+  }
+
+  <p>@Html.ActionLink("Back to Engineer", "details", new {id = Model.EngineerId})</p>
+
+</div>
+

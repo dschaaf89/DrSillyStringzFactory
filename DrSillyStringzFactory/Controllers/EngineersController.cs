@@ -35,20 +35,20 @@ namespace DrSillyStringzFactory.Controllers
       Engineer model = _db.Engineers.FirstOrDefault(x => x.EngineerId == id);
       return View(model); 
     }
-    public ActionResult AddDoctor(int id)
+    public ActionResult AddLicense(int id)
     {
       Engineer thisEngineer = _db.Engineers.FirstOrDefault(s => s.EngineerId == id);
-      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      ViewBag.LicenseId = new SelectList(_db.Licenses, "LicenseId", "LicenseType");
       return View(thisEngineer);
     }
     [HttpPost]
-    public ActionResult AddDoctor(EngineerMachine engineerMachine)
+    public ActionResult AddLicense(EngineerLicense engineerLicense)
     {
-      if (engineerMachine.MachineId != 0)
+      if (engineerLicense.LicenseId != 0)
       {
-        if (_db.EngineerMachines.Where(x => x.EngineerId == engineerMachine.EngineerId && x.MachineId == engineerMachine.MachineId).ToHashSet().Count == 0)
+        if (_db.EngineerLicenses.Where(x => x.EngineerId == engineerLicense.EngineerId && x.LicenseId == engineerLicense.LicenseId).ToHashSet().Count == 0)
         {
-          _db.EngineerMachines.Add(engineerMachine);
+          _db.EngineerLicenses.Add(engineerLicense);
         }
       }
       _db.SaveChanges();
@@ -65,6 +65,25 @@ namespace DrSillyStringzFactory.Controllers
     {
       var thisEngineer = _db.Engineers.FirstOrDefault(x => x.EngineerId == id);
       _db.Engineers.Remove(thisEngineer);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+    public ActionResult AddEngineer(int id)
+    {
+      Machine thisMachine = _db.Machines.FirstOrDefault(s => s.MachineId == id);
+      ViewBag.EngineerID = new SelectList(_db.Engineers, "EngineerId", "Name");
+      return View(thisMachine);
+    }
+    [HttpPost]
+    public ActionResult AddEngineer(EngineerMachine engineerMachine)
+    {
+      if (engineerMachine.EngineerId != 0)
+      {
+        if (_db.EngineerMachines.Where(x => x.MachineId == engineerMachine.MachineId && x.EngineerId == engineerMachine.EngineerId).ToHashSet().Count == 0)
+        {
+          _db.EngineerMachines.Add(engineerMachine);
+        }
+      }
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
