@@ -6,10 +6,10 @@ namespace DrSillyStringzFactory.Models
 {
   public class DesignTimeDbContextFactory
   {
-    public class DoctorOfficeContextFactory : IDesignTimeDbContextFactory<EngineerMachineContext>
+    public class EngineerMachineContextFactory : IDesignTimeDbContextFactory<EngineerMachineContext>
     {
 
-      DoctorOfficeContext IDesignTimeDbContextFactory<EngineerMachineContext>.CreateDbContext(string[] args)
+      EngineerMachineContext IDesignTimeDbContextFactory<EngineerMachineContext>.CreateDbContext(string[] args)
       {
         IConfigurationRoot configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())

@@ -1,13 +1,16 @@
+using Microsoft.EntityFrameworkCore;
 namespace DrSillyStringzFactory.Models
 {
-    public class EngineerMachineContext: DbContext
+    public class EngineerMachineContext : DbContext
     {
-          protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+         public  DbSet<Engineer> Engineers { get; set; }
+         public  DbSet<Machine> Machines { get; set; }
+         public  DbSet<EngineerMachine> EngineerMachines { get; set; }
+        
+
+        public EngineerMachineContext(DbContextOptions options) : base(options) {}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            public DbSet<Engineer> Engineer { get; set; }
-            public DbSet<Machine> Machine { get; set; }
-             public  DbSet<EngineerMachine> EngineerMachine { get; set; }
-            public EngineerMachineContext(DbContextOptions options) : base(options) {}
             optionsBuilder.UseLazyLoadingProxies();
         }
     }
