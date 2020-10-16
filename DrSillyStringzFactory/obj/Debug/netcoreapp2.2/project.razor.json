@@ -1877,13 +1877,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Engineer\\Index.cshtml",
-      "TargetPath": "Views\\Engineer\\Index.cshtml",
+      "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Engineers\\Create.cshtml",
+      "TargetPath": "Views\\Engineers\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Engineers\\Index.cshtml",
+      "TargetPath": "Views\\Engineers\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using DrSillyStringzFactory.Models;
 namespace DrSillyStringzFactory.Controllers
 {
-    public class EngineersController : Controller
-    {
+  public class EngineersController : Controller
+  {
     private readonly EngineerMachineContext _db;
     public EngineersController(EngineerMachineContext db)
     {
@@ -19,5 +19,16 @@ namespace DrSillyStringzFactory.Controllers
       List<Engineer> model = _db.Engineers.OrderBy(x => x.Name).ToList();
       return View(model);
     }
+    public ActionResult Create()
+    {
+      return View();
     }
+    [HttpPost]
+    public ActionResult Create(Engineer engineer)
+    {
+      _db.Engineers.Add(engineer);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+  }
 }
