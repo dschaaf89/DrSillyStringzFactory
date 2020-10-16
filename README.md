@@ -16,14 +16,15 @@ This Project was to show my understanding of many to many relationships. this pr
 ### Specs
 | Spec | |  |
 | :-------------     | :------------- | :------------- |
-|  1.  Create Stylist and Client Classes | | |
-|  2.  Build Stylist Controllers for Index, Create, Delete, Details, Edit |  |  |
-|  3.  Build Client Controllers for Index, Create, Delete, Details, and Edit | ||
-|  4.  Build Home Controllers for Index |  |  |
-|  5.  Build Home Views for Index |  |  |
-|  6.  Build Client Views for Index, Create, Delete, Details, Edit | |  |
-|  7.  Add Links to Clients Class and HTML |  |  |
-|  8.  Add CSS and Styling |  |  |
+|  1.  Create License,Machine and Engineer Classes | | |
+|  2.  Build License Controllers for Index, Create, Delete, Details, Edit |  |  |
+|  3.  Build Machine Controllers for Index, Create, Delete, Details, and Edit | ||
+|  4.  Build Engineer Controllers for Index, Create, Delete, Details, and Edit | ||
+|  5.  Build Home Controllers for Index |  |  |
+|  6.  Build Home Views for Index |  |  |
+|  7.  Build Machine,Engineer and License Views for Index, Create, Delete, Details,AddEngineer,AddLicense | |  |
+|  8.  Add Links to Clients Class and HTML |  |  |
+|  9.  Add CSS and Styling |  |  |
 
 
 ## Setup/Installation Requirements
@@ -36,7 +37,7 @@ This Project was to show my understanding of many to many relationships. this pr
   * Type "dotnet restore" to get bin and obj files
   * Type "dotnet run" in GitBash to run the program
   * Add database per the instructions below.
-  * make stylists and clients 
+  * Make Engineers,Licenses and Machines
 
 * Cloning options
   * For cloning please use the following GitHub [tutorial](https://docs.github.com/en/enterprise/2.16/user/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -45,9 +46,12 @@ This Project was to show my understanding of many to many relationships. this pr
   * Type "dotnet restore" to get bin and obj files
   * Type "dotnet run" in GitBash to run the program
   * Add database per the instructions below.
-  * make stylists and clients
+  * Make Engineers,Licenses and Machines
 
 ### Database Setup
+
+*setup with database update
+* run dotnet ef database update and it will build out your datebase.
 
 * Setup with SQL Import
   * MySQL
@@ -62,7 +66,7 @@ This Project was to show my understanding of many to many relationships. this pr
 
 ## Known Bugs
 
-No Known Bugs
+Built the program under the wrong root folder.
 
 ## Technologies Used
 
@@ -70,7 +74,6 @@ Main Programs
 * MySQL
 * C# / ASP.NET Core 
 * MVC
-* MSTest
 * CSS
 * Bootstrap
 
