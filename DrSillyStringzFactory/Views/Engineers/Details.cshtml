@@ -8,18 +8,18 @@
   <div class="jumbotron">
     <h1>@Model.Name Page</h1>
   </div>
-  @if(Model.EngineerMachines.Count == 0)
+  @if(Model.EngineerMachine.Count == 0)
   {
     <p>@Model.Name has no Machines.</p>
   }
   <ol>
-    @foreach (EngineerMachine engineerMachine in Model.EngineerMachines)
+    @foreach (EngineerMachine engineerMachine in Model.EngineerMachine)
     {
         <li>@engineerMachine.Engineer.Name</li>
     }
   </ol>
     <ol>
-    @foreach (EngineerLicense engineerLicense in Model.EngineerLicenses)
+    @foreach (EngineerLicense engineerLicense in Model.EngineerLicense)
     {
         <li>@engineerLicense.License.LicenseId</li>
     }

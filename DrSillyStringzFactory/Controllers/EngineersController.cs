@@ -68,24 +68,6 @@ namespace DrSillyStringzFactory.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-    public ActionResult AddEngineer(int id)
-    {
-      Machine thisMachine = _db.Machines.FirstOrDefault(s => s.MachineId == id);
-      ViewBag.EngineerID = new SelectList(_db.Engineers, "EngineerId", "Name");
-      return View(thisMachine);
-    }
-    [HttpPost]
-    public ActionResult AddEngineer(EngineerMachine engineerMachine)
-    {
-      if (engineerMachine.EngineerId != 0)
-      {
-        if (_db.EngineerMachines.Where(x => x.MachineId == engineerMachine.MachineId && x.EngineerId == engineerMachine.EngineerId).ToHashSet().Count == 0)
-        {
-          _db.EngineerMachines.Add(engineerMachine);
-        }
-      }
-      _db.SaveChanges();
-      return RedirectToAction("Index");
-    }
+    
   }
 }
