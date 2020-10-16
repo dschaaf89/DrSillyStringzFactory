@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5sM2V859J8zL5iEh22EF7Y1A8QaAys0aAx6ZkyU6TznRBIuEYm6zlwAbdMucQjV+tsZFDQhkuZw27t8ct9SVPw==",
+  "dgSpecHash": "XJXMDAZADM7dGLlB32eHXoCuacBa+pvAHvzg2UseYeS145wynvoQgXQqQ3z4ZHFq5eh9Y2EBfU0ivLH+KhsGjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory\\DrSillyStringzFactory.csproj",
+  "projectFilePath": "C:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\DrSillyStringzFactory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Danie\\.nuget\\packages\\castle.core\\4.2.1\\castle.core.4.2.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",

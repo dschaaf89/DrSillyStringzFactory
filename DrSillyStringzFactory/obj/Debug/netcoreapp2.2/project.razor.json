@@ -1877,6 +1877,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Engineer\\Index.cshtml",
+      "TargetPath": "Views\\Engineer\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Danie\\OneDrive\\Desktop\\DrSillyStringzFactory.Solutions\\DrSillyStringzFactory\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
