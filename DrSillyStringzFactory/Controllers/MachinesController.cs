@@ -41,9 +41,14 @@ namespace DrSillyStringzFactory.Controllers
     public ActionResult DeleteConfirmed(int id)
     {
       var thisMachine = _db.Machines.FirstOrDefault(x => x.MachineId == id);
-      _db.Doctors.Remove(thisMachine);
+      _db.Machines.Remove(thisMachine);
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+     public ActionResult Details(int id)
+    {
+      Machine model = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
+      return View(model);
     }
         
     }

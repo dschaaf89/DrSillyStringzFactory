@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+@using DrSillyStringzFactory.Models;
+
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>@Model.Name Page</h1>
+  </div>
+  @if(Model.EngineerMachine.Count == 0)
+  {
+    <p>@Model.Name has no Machines.</p>
+  }
+  <ol>
+    @foreach (EngineerMachine engineerMachine in Model.EngineerMachine)
+    {
+        <li>@engineerMachine.Machine.Name</li>
+    }
+  </ol>
+  <button class="btn btn-outline-dark" onclick="window.location.href='/machines'">Machines</button>
+  @Html.ActionLink("Delete","Delete", new {id = Model.DoctorId}, new{@class="btn btn-outline-dark"})
+
+
+</div>
