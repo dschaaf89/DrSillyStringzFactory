@@ -1,15 +1,18 @@
-# _Eau Claire's Salon_
+# _Dr SillyStringz Factory_
 
-#### _C# ASP.NET MCV w/ MySQL Project for Epicodus, October 9th, 2020_
+#### _C# ASP.NET MCV w/ MySQL Project for Epicodus, October 16th, 2020_
 
 #### By _** Daniel Schaaf **_
 
 ## Description
 
-This Project was to create a website for Mrs. Claire's salon so she could track stylist's and clients. she can add stylist and then add clients to the stylist by using a mySql database using a one-many relationship.
-<!-- Brainstorming
+This Project was to show my understanding of many to many relationships. this project had us take three classes and show to to make them into a many to many relationships. here is my brainstorming chart that i used to create my database
 
- -->
+
+###Brainstorming
+
+![](images/chart.jpg)
+ 
 ### Specs
 | Spec | |  |
 | :-------------     | :------------- | :------------- |
