@@ -11,7 +11,7 @@ This Project was to show my understanding of many to many relationships. this pr
 
 ###Brainstorming
 
-<h1 align='center'><img width='600' height='450' src='DrSillyStringzFactory/wwwroot/img/chart.PNG'>
+<h1 align='center'><img width='600' height='450' src='images/chart.PNG'>
  
 ### Specs
 | Spec | |  |
